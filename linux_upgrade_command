@@ -1,0 +1,16 @@
+update-manager-core 패키지를 사용하여 업그레이드를 진행합니다. 
+
+sudo apt install update-manager-core 
+sudo do-release-upgrade
+
+ 
+
+만약 No new release found 라는 메시지가 뜬다면, 아직 정식 업그레이드를 지원하고 있지 않습니다.
+
+-d 옵션을 추가하여 개발 릴리즈 버전으로 업그레이드 해야합니다.
+
+ 
+
+sudo do-release-upgrade -d
+
+
