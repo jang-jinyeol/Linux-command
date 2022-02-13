@@ -20,17 +20,27 @@ docker pull tensorflow/tensorflow:latest-gpu-jupyter
 
 www.tensorflow.org/install/docker
 
+nvidia-container-toolkit 설치
+
+# Add the package repositories
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+
+sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
+sudo systemctl restart docker
+
 컨테이너 확인
 
 docker ps -a
 
 docker ps
 
-종료된 컨테이너는 실행 해줘야 한다.
+종료된 컨테이너는 실행해야 접속 가능함.
 
-docker start ()
+docker start (컨테이너 이름)
 
 컨테이너 접속
 
-docker attach ()
+docker attach (컨테이너 이름)
 
