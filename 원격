@@ -1,10 +1,10 @@
 먼저 원격 접속을 허용해야한다.
 
-$ sudo apt-get update
+sudo apt-get update
 
-$ sudo apt-get install openssh-server
+sudo apt-get install openssh-server
 
-$ sudo service ssh start
+sudo service ssh start
 
  
 
@@ -13,23 +13,23 @@ $ sudo service ssh start
 
 xrdp와 관련된 모든 프로그램들을 제거하고 업데이트, 업그레이드 한다.
 
-$ sudo apt-get remove xrdp vnc4server tightvncserver xfce4
+sudo apt-get remove xrdp vnc4server tightvncserver xfce4
 
 
-$ sudo apt-get update
+sudo apt-get update
 
-$ sudo apt-get upgrade
+sudo apt-get upgrade
 
-$ sudo apt-get install tightvncserver
+sudo apt-get install tightvncserver
 
-$ sudo apt-get install xrdp=0.6.1-2 
+sudo apt-get install xrdp=0.6.1-2 
 
 
 
 자동 업데이트 막기
 
-$ cd /etc/apt/preferences.d/
-$ sudo vi xrdp
+cd /etc/apt/preferences.d/
+sudo vi xrdp
 
 그럼 xrdp라는 이름으로 파일이 생기고 vim으로 아래를 적고 저장 (vim 명령어: esc -> :wq)
 
