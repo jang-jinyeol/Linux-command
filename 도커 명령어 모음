@@ -6,6 +6,8 @@ docker images
 
 docker ps -a
 
+docker ps
+
 종료된 컨테이너는 실행 해줘야 한다.
 
 docker start ()
