@@ -1,0 +1,16 @@
+
+apt list --installed        // 설치된 모든 프로그램 목록 보여줌.
+
+
+apt list --installed | grep 프로그램명      // 프로그램명에 와일드카드 사용 못함.
+
+
+apt list 프로그램명 --installed
+or
+apt list --installed 프로그램명        // 프로그램명에 와일드카드 사용 가능.
+
+
+제거 
+
+sudo apt-get --purge remove program
+
