@@ -1,4 +1,11 @@
-# 먼저 원격 접속을 허용해야한다.
+## 먼저 원격 접속을 허용해야한다.$ cd /etc/apt/preferences.d/
+$ sudo vi xrdp
+
+그럼 xrdp라는 이름으로 파일이 생기고 vim으로 아래를 적고 저장 (vim 명령어: esc -> :wq)
+
+Package: xrdp
+Pin: version 0.6.1-2
+Pin-Priority: 1000 
 
 $ sudo apt-get update
 
