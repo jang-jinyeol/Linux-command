@@ -1,0 +1,16 @@
+이미지 확인
+
+docker images
+
+컨테이너 확인
+
+docker ps -a
+
+종료된 컨테이너는 실행 해줘야 한다.
+
+docker start ()
+
+컨테이너 접속
+
+docker attach ()
+
