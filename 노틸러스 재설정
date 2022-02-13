@@ -1,0 +1,5 @@
+sudo killall nautilus
+
+nautilus
+
+sudo apt install --reinstall nautilus-data
