@@ -2,6 +2,24 @@
 
 docker images
 
+이미지 가져오기
+
+docker pull tensorflow/tensorflow:latest-gpu-jupyter
+
+위 이미지는 지피유를 지원하면서 주피터를 기본 에디터로 사용하는 이미지
+
+이름 뒤에 tag를 계속해서 달아서 원하는 이미지를 받을 수 있다.
+
+-는 태그 간의 구분자로
+
+여러 개의 태그를 동시에 달아서 작업을 수행할 수 있다.
+
+텐서플로우에서 공식적으로 지원하는 컨테이너 이미지들은
+
+아래의 페이지에서 확인할 수 있다.
+
+www.tensorflow.org/install/docker
+
 컨테이너 확인
 
 docker ps -a
