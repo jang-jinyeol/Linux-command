@@ -1,0 +1,45 @@
+# 메인보드 설정
+
+EUP - 사용안함
+
+PME로 다시 시작 - 사용
+
+# 우분투 20.4 설정
+
+sudo apt-get install net-tools ethtool wakeonlan
+
+ip addr 또는 ifconfig로 인터페이스명 확인
+
+
+sudo ethtool -s 인터페이스명 wol g
+
+sudo ethtool 인터페이스명
+
+Wake-on: g 상태로 변경되었는지 확인
+
+시스템 재부팅 시 설정이 풀려서 스크립트 파일 추가
+
+gedit /etc/systemd/system/wol.service
+
+-----------------------------------
+[Unit]
+Description=Configure Wake-up on LAN
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ethtool -s [인터페이스] wol g
+
+[Install]
+WantedBy=basic.target 
+-----------------------------------
+
+
+이후 만든 파일을 ststemctl Daemon에 등록
+
+systemctl daemon-reload
+
+systemctl enable /etc/systemd/system/wol.service
+
+systemctl start /etc/systemd/system/wol.service
+
+마지막 커맨드 에러 무시
