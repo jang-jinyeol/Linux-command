@@ -1,0 +1,9 @@
+
+
+I'll describe my solution for Ubuntu 20.04. I've managed to compile MPOW BH456A successfully using sudo make install INTERFACE=all but the device remained unrecognizable.
+
+After some research, I've discovered this GitHub repository that explains it's just a missing firmware file, as described in your output firmware file rtl_bt/rtl8761b_fw.bin not found. To apply this patch, just execute:
+
+git clone https://github.com/pedrovagner/fix-ubuntu-bluetooth-adapter
+sh fix-ubuntu-bluetooth-adapter/project.sh fix
+
