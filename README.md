@@ -11,3 +11,10 @@ Version : ubuntu 22.04
 # 시스템 오류 보고 없애기
 
 sudo rm /var/crash/*
+
+# 차단 사이트 들어가기
+sudo ip link set enp5s0 mtu 400
+
+다시 변경
+
+sudo ip link set enp5s0 mtu 1500
