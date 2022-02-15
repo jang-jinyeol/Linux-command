@@ -63,6 +63,11 @@ docker run --gpus all --it --rm --name myTensorflow -p 8888:8888 tensorflow/tens
 
 -d : 컨테이너를 일반 프로세스가 아닌 데몬프로세스 형태로 실행하여 프로세스가 끝나도 유지되도록 한다
 
+컨테이너를 종료하지 않고 터미널만 나가고 싶으면(detach) ctrl+p 를 누른 후, ctrl+q 키를 누르면 detach 된다.
+
+docker ps로 확인해 보면 돌아가고 있는 게 보인다.
+
+다시 돌아가려면 docker attach (name)
 
 
 텐서플로우 gpu 사용여부 확인
