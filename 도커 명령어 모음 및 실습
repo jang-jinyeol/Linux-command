@@ -53,7 +53,7 @@ docker pull tensorflow/tensorflow:latest-gpu-jupyter
 
 (나의 경우 44551 : 8888로 포트포워딩을 했기 때문에 외부에서 ip:44551로 접속하면 내부 컨테이너 포트인 8888로 접속된다.)
 
-docker run ---it --rm --name myTensorflow -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyter
+docker run --gpus all --it --rm --name myTensorflow -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyter
 
 텐서플로우 gpu 사용여부 확인
 
