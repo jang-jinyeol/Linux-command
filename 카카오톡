@@ -19,7 +19,9 @@ winecfg
 
 라이브러리에서 dxdx11_43 추가
 
-cd ~/Download
+카카오톡 윈도우 버전 설치
+
+cd ~/Download 설치 위치로 이동
 
 LANG="ko_KR.UTF-8" wine KakaoTalk_Setup.exe
 
