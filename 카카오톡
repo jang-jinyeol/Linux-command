@@ -26,3 +26,12 @@ LANG="ko_KR.UTF-8" wine KakaoTalk_Setup.exe
 설치 완료
 
 자동로그인 꺼야 오류없이 로그인 성공함.
+
+
+한글 사용하기 (KIME 설치 후 적용)
+
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Wine\X11 Driver]
+"InputStyle"="root"
+
