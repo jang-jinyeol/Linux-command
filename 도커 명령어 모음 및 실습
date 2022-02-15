@@ -41,6 +41,21 @@ sudo systemctl restart docker
 
 sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 
+정상적으로 작동하면 그래픽카드 정보가 뜸
+
+주피터 노트북 gpu 설치
+
+docker pull tensorflow/tensorflow:latest-gpu-jupyter
+
+컨테이너 만들기 (외부에서 접속하려면 포트포워딩 필요)
+
+-p [바인딩 할 호스트의 포트]:[바인딩 할 컨테이너의 포트]
+
+(나의 경우 44551 : 8888로 포트포워딩을 했기 때문에 외부에서 ip:44551로 접속하면 내부 컨테이너 포트인 8888로 접속된다.)
+
+docker run -it --rm --name myTensorflow -p 8888:8888 tensorflow/tensorflow:latest-gpu-jupyter
+
+docker pull tensorflow/tensorflow:latest-gpu-jupyter
 컨테이너 확인
 
 docker ps -a
