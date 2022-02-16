@@ -32,7 +32,7 @@ ufw 방화벽 설정은 따로 안 해줬다.
 
 포트번호 변경(포트포워딩 필요)
 
-sudo gedit /etc/xrdo/xrdp.ini
+sudo gedit /etc/xrdp/xrdp.ini
 
 여기서 검은화면이 떴다.
 
