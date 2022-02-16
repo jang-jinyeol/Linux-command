@@ -30,6 +30,10 @@ sudo adduser xrdp ssl-cert
 
 ufw 방화벽 설정은 따로 안 해줬다.
 
+포트번호 변경(포트포워딩 필요)
+
+sudo gedit /etc/xrdo/xrdp.ini
+
 여기서 검은화면이 떴다.
 
 스크립트를 수정해줘야 하는데 나는 gedit을 선호해서 gedit으로 수정했다.
