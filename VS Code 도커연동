@@ -1,3 +1,7 @@
+도커 종류할 때 docker.socket 오류 발생하는 경우
+
+systemctl stop docker.socket
+
 Manage Docker as a non-root user
 The Docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user root and other users can only access it using sudo. The Docker daemon always runs as the root user.
 
