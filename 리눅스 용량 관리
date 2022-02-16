@@ -1,0 +1,36 @@
+용량 많이 잡아먹는 폴더 확인
+
+for i in /*; do echo $i; find $i |wc -l; done  
+
+for i in /var/*; do echo $i; find $i |wc -l; done  
+
+용량 많이 잡아먹는 주범 docker/overlay2
+
+확인되었으면 폴더 이동
+
+ex) cd /var
+
+폴더에서 용량 확인
+
+du -sh *
+
+먼저 도커 종료
+
+service docker stop
+
+도커 종류할 때 docker.socket 오류 발생하는 경우
+
+systemctl stop docker.socket
+
+종료만 했다 다시켜도 용량이 상당히 줄었다.
+
+image prune는 이름 없는 모든 이미지를 삭제한다.
+
+docker image prune -a
+(6GB 삭제 됨)
+
+system prune는 중지된 컨테이너 , 사용하지 않는 네트워크, 사용하지 않는 레이어를 모두 삭제한다. (현재 실행 중인 컨테이너 빼고 전부 삭제)
+(13.25kb 삭제 되었다)
+
+docker system prune -a
+
