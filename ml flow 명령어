@@ -1,0 +1,10 @@
+
+
+
+내부
+
+mlflow ui
+
+ui 외부접속
+
+mlflow ui --host 0.0.0.0
