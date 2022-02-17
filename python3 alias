@@ -1,0 +1,12 @@
+gedit ~/.bashrc
+
+
+추가
+
+alias python='python3'
+
+alias pip='pip3'
+
+저장 후
+
+source ~/.bashrc
