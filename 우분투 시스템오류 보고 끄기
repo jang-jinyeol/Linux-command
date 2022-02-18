@@ -1,0 +1,10 @@
+오류를 보고하시겠습니까?
+
+0으로 변경
+
+~$sudo gedit /etc/default/apport
+ 
+# set this to 0 to disable apport, or to 1 to enable it
+# you can temporarily override this with
+# sudo service apport start force_start=1
+enabled=0
