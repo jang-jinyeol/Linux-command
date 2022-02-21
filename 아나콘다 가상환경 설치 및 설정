@@ -1,0 +1,31 @@
+다운 받은 후 bash로 실행
+
+bash Anaconda3-2020.11-Linux-x86_64.sh
+
+sudo gedit ~/.bashrc
+
+
+
+마지막 줄에 환경변수 추가
+
+export PATH=~/anaconda3/bin:~/anaconda3/condabin:$PATH
+
+
+터미널에서 설정완료
+
+source ~/.bashrc
+
+
+콘다 버전 확인
+
+conda -V
+
+
+프롬프트에 콘다 default 설정 해제
+
+conda config --set auto_activate_base False
+
+나머진 윈도우랑 동일
+
+conda activate 
+conda deactivate
