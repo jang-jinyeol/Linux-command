@@ -1,0 +1,20 @@
+sudo apt-get install openssh-server
+
+sudo vim /etc/ssh/sshd_config
+
+
+포트추가
+
+Port ()
+
+sudo service ssh start
+
+sudo service ssh stop
+
+sudo service ssh status
+
+우분투에서 접속
+
+ssh -p 포트번호 유저이름@IP주소
+
+Remmina 사용하면 rdp와 ssh 사용 가능
