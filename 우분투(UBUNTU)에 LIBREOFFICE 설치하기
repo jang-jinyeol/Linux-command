@@ -1,0 +1,11 @@
+sudo add-apt-repository ppa:libreoffice/ppa
+sudo apt-get update
+sudo apt-get install libreoffice
+
+
+
+
+추가설치
+
+- gnome : sudo apt-get install libreoffice-gnome
+- kde : sudo apt-get install libreoffice-kde
