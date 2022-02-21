@@ -29,3 +29,11 @@ conda config --set auto_activate_base False
 
 conda activate 
 conda deactivate
+
+아나콘다 업데이트
+
+conda update -n base -c defaults conda
+
+then you can install opencv normally using:
+
+conda install -c conda-forge opencv
