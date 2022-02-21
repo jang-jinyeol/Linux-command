@@ -15,6 +15,8 @@ sudo service ssh status
 
 우분투에서 접속
 
+SSH 클라이언트는 우분투에 기본으로 설치되어 있다
+
 ssh -p 포트번호 유저이름@IP주소
 
 Remmina 사용하면 rdp와 ssh 사용 가능
