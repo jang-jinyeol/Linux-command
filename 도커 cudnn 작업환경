@@ -32,7 +32,7 @@ apt-get install -y software-properties-common
 /////////////////
 아나콘다 설치
 
-apt install curl
+apt install -y curl
 
 curl -O https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh \
 
