@@ -6,7 +6,7 @@ ubuntu-drivers 설치
 add-apt-repository 설치
 
 
-apt update \
+apt update
 apt-get install -y ubuntu-drivers-common \
 apt-get install -y software-properties-common
 
