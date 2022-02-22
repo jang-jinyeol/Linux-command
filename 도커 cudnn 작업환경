@@ -114,3 +114,12 @@ conda install -c conda-forge tensorboardx -y
 
 import torch
 torch.cuda.is_available()
+
+컨테이너 안에서 opencv 에러
+
+이 에러 >> libgl1-mesa-glx
+
+
+apt update
+
+apt-get install libgl1-mesa-glx
