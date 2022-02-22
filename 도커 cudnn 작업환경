@@ -4,9 +4,20 @@ nvidia-smi: 드라이버가 지원하는 최대 CUDA 버전
 
 nvcc -V: 실제로 설치된 CUDA 버전
 
+docker pull pytorch/pytorch:1.1.0-cuda10.0-cudnn7.5-devel
+
+컨테이너 생성 및 접속
+nvidia-docker로 해야 쿠다 사용가능 함
+nvidia-docker container run -it --name "test" pytorch/pytorch:1.1.0-cuda10.0-cudnn7.5-devel
+
+쿠다 True 확인
+
+python
+import torch
+torch.cuda.is_available()
 
 
-docker pull nvidia/cuda:11.3.1-cudnn8-devel-ubuntu20.04
+///////////////////
 
 가장 먼저 업데이트
 ubuntu-drivers 설치
@@ -16,7 +27,9 @@ add-apt-repository 설치
 apt update
 apt-get install -y ubuntu-drivers-common \
 apt-get install -y software-properties-common
+/////////////////////////////
 
+/////////////////
 아나콘다 설치
 
 cd ./home/anaconda
@@ -26,6 +39,8 @@ curl -O https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh \
 sha256sum Anaconda3-5.3.1-Linux-x86_64.sh \
 
 bash Anaconda3-5.3.1-Linux-x86_64.sh
+//////////////////////
+
 
 # CUDA 버전 확인
 $ nvcc --version
