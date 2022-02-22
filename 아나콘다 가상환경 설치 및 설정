@@ -53,3 +53,14 @@ conda install -c conda-forge scikit-image -y \
 conda install -c conda-forge timm -y \
 
 conda install -c conda-forge tensorboardx -y
+
+
+연구실 컴퓨터에서 다음과 같은 오류 발생
+
+LibGL.so.1
+
+아래 설치로 해결
+
+apt-get install libgl1-mesa-glx
+
+
