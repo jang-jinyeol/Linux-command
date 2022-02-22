@@ -123,3 +123,9 @@ torch.cuda.is_available()
 apt update
 
 apt-get install -libgl1-mesa-glx
+
+----------
+
+PILLOW_VERSION 에러
+
+conda install pillow=6.2.1
