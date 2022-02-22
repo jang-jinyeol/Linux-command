@@ -40,13 +40,11 @@ conda update -n base -c defaults conda
 face_detection 프로젝트에 필요한 것들
 
 
-(쿠다 툴킷 버전확인 11.6 버전용)
+
 
 conda install -c conda-forge opencv -y \
 
-conda install -c conda-forge cudatoolkit=11.6 -y \
-
-conda install pytorch torchvision torchaudio -c pytorch -y \
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch \
 
 conda install -c conda-forge scikit-image -y \
 
@@ -54,6 +52,11 @@ conda install -c conda-forge timm -y \
 
 conda install -c conda-forge tensorboardx -y
 
+
+쿠다 사용가능 여부 확인
+
+import torch
+torch.cuda.is_available()
 
 연구실 컴퓨터에서 다음과 같은 오류 발생
 
