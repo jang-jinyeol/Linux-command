@@ -1,3 +1,10 @@
+nvidia-smi와 nvcc -V의 차이
+
+nvidia-smi: 드라이버가 지원하는 최대 CUDA 버전
+
+nvcc -V: 실제로 설치된 CUDA 버전
+
+
 
 docker pull nvidia/cuda:11.3.1-cudnn8-devel-ubuntu20.04
 
