@@ -20,3 +20,12 @@ SSH 클라이언트는 우분투에 기본으로 설치되어 있다
 ssh -p 포트번호 유저이름@IP주소
 
 Remmina 사용하면 rdp와 ssh 사용 가능
+
+scp -P 포트번호 (전송할 파일) (전송할 서버주소@아이디):(저장될 서버의 디렉토리)
+
+ex) scp -P 44553 backup.tar jy@175.125.151.102:/home/jy
+
+디렉토리를 전송할 경우 -r 추가
+
+ex) scp -P 9999 -r /home/local remote@myserver.com:/home/remote
+
