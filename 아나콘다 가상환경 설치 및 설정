@@ -2,8 +2,10 @@
 
 bash Anaconda3-2020.11-Linux-x86_64.sh
 
-sudo gedit ~/.bashrc
 
+////도커 컨테이너에선 설정 필요 x
+
+sudo gedit ~/.bashrc
 
 
 마지막 줄에 환경변수 추가
@@ -15,6 +17,7 @@ export PATH=~/anaconda3/bin:~/anaconda3/condabin:$PATH
 
 source ~/.bashrc
 
+////////////////////
 
 콘다 버전 확인
 
@@ -42,9 +45,9 @@ face_detection 프로젝트에 필요한 것들
 
 
 
-conda install -c conda-forge opencv -y \
+//conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch \
 
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch \
+conda install -c conda-forge opencv -y \
 
 conda install -c conda-forge scikit-image -y \
 
