@@ -122,4 +122,4 @@ torch.cuda.is_available()
 
 apt update
 
-apt-get install libgl1-mesa-glx
+apt-get install -libgl1-mesa-glx
