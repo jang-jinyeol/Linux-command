@@ -1,4 +1,4 @@
-vscode에서 ctrl + shift + p -> remote container attach 선택
+vscode에서 remote development ctrl + shift + p -> remote container attach 선택
 
 현재 돌아가고 있는 컨테이너 선택
 
