@@ -14,6 +14,21 @@ sudo usermod -aG docker $USER
 
 sudo service docker restart
 
+그룹 추가한 이후에도 /var/run/docker.sock의 permission denied 발생한다.
+
+ex) docker ps
+
+해결 방법은 아래와 같다.
+
+/var/run/docker.sock 파일의 권한을 666으로 변경하여 그룹 내 다른 사용자도 접근 가능하게 변경
+sudo chmod 666 /var/run/docker.sock
+또는 chown 으로 group ownership 변경
+(/var/run/docker.sock 그룹을 도커로 바꾸고 소유자를 jy로 변경)
+sudo chown jy:docker /var/run/docker.sock
+
+
+
+
 Manage Docker as a non-root user
 The Docker daemon binds to a Unix socket instead of a TCP port. By default that Unix socket is owned by the user root and other users can only access it using sudo. The Docker daemon always runs as the root user.
 
