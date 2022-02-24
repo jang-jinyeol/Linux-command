@@ -51,5 +51,10 @@ wine regedit으로 확인
 
 그놈 쉘 확장 설치
 
+sudo apt install chrome-gnome-shell
+
 topicons plus 설치 후 옵션 설정
-.
+
+https://extensions.gnome.org/extension/1031/topicons/
+
+on으로 바꾸면 자 설치
