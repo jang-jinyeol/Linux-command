@@ -58,3 +58,7 @@ topicons plus 설치 후 옵션 설정
 https://extensions.gnome.org/extension/1031/topicons/
 
 on으로 바꾸면 자동 설치
+
+sudo apt install gnome-tweaks
+
+설치 후 아이콘 위치 변경
