@@ -9,7 +9,7 @@ wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
 sudo apt-get update
-sudo apt-get install --install-recommends winehq-stable
+sudo apt-get install -y --install-recommends winehq-stable
 
 wine 설정
 
@@ -17,7 +17,7 @@ winecfg
 
 윈도우 10으로 설치
 
-라이브러리에서 dxdx11_43 추가
+라이브러리에서 d3dx11_43 추가
 
 카카오톡 윈도우 버전 설치
 
