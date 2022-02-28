@@ -1,0 +1,2 @@
+설치 후 /usr/share/applications/hoffice11-hwp.desktop 파일을 vi로 열어 위와 같이 변경해 줍니다.
+변경된 부분은 Exec=/bin/bash -c "LANGUAGE=ko_KR /opt/hnc/hoffice11/Bin/hwp %f" 와 같이  변경합니다. 저장 후 실행해 보면 한글 인터페이스로 실행됩니다. 
