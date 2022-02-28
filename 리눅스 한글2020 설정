@@ -1,2 +1,6 @@
 설치 후 /usr/share/applications/hoffice11-hwp.desktop 파일을 vi로 열어 위와 같이 변경해 줍니다.
 변경된 부분은 Exec=/bin/bash -c "LANGUAGE=ko_KR /opt/hnc/hoffice11/Bin/hwp %f" 와 같이  변경합니다. 저장 후 실행해 보면 한글 인터페이스로 실행됩니다. 
+
+ibus에서 백스페이스 문제
+gsettings set org.freedesktop.ibus.engine.hangul use-event-forwarding false
+이제 한글2020 for Linux를 다시 실행하여 보면 아래의 스크린샷처럼 엔터키나 백스페이스키도 잘 작동합니다. 추가적으로 나눔고딕이나 기타 폰트(TTF)를 다음의 경로에 복사하여 주면 다른 문서에서 지정한 한글 서체들도 잘 나타납니다. 폰트의 설치경로는 가능한하 우분투의 /usr/share/fonts 가 아닌 한글2020 for Linux의 경로(/opt/hnc/hoffice11/Shared/TTF/Install)에 복사해줘야 시스템상의 서체와 충돌나지 않고 한글2020 for Linux에서만 사용할 수 있습니다.
