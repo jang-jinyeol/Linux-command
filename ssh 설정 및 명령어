@@ -29,3 +29,4 @@ ex) scp -P 44553 backup.tar jy@175.125.151.102:/home/jy
 
 ex) scp -P 9999 -r /home/local remote@myserver.com:/home/remote
 
+.
