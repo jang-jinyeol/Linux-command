@@ -12,3 +12,5 @@ cat /etc/shells
 쉘 변경
 
 chsh -s /bin/bash jy
+
+.
