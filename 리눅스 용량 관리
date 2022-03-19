@@ -1,3 +1,7 @@
+var 폴더 크기 정렬
+
+sudo du -h /var | sort -n | tail -5
+
 용량 많이 잡아먹는 폴더 확인
 
 for i in /*; do echo $i; find $i |wc -l; done  
