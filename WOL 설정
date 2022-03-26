@@ -43,4 +43,4 @@ systemctl enable /etc/systemd/system/wol.service
 systemctl start /etc/systemd/system/wol.service
 
 마지막 커맨드 에러 무시
-
+.
