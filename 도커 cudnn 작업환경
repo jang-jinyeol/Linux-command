@@ -137,3 +137,27 @@ apt-get install -libgl1-mesa-glx
 PILLOW_VERSION 에러
 
 conda install pillow=6.2.1
+
+
+sudo docker run --name linux_gui -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY linux_gui_v1 bash
+
+or
+(rm 주의)
+docker run -p 8888:8888 --gpus all --privileged --rm -it -v /dev/video0:/dev/video0 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY -v /dev/snd:/dev/snd -e="QT_X11_NO_MITSHM=1" -v ~/docker:/data [저장한 이미지] bash
+
+
+호스트에서
+
+xhost +
+or
+xhost +local:docker
+
+(해제하려면 -)
+
+도커에서
+
+apt-get update
+apt-get install x11-apps
+xclock
+
+시계모양 뜨면 성공
