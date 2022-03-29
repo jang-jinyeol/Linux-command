@@ -165,3 +165,13 @@ xclock
 
 웹캠
 --env="QT_X11_NO_MITSHM=1" --device="/dev/video0:/dev/video0"
+
+현재 위치에서 디렉토리 즉 폴더 개수 세기
+ls -l | grep ^d | wc -l
+
+현재 위치에서 파일의 개수 세기
+ls -l | grep ^- | wc -l
+
+현재 디렉토리의 하위 파일 개수 세기
+find . -type f | wc -l
+
