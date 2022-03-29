@@ -1,0 +1,16 @@
+Docker을 run 해서 사용하는 중간에 추가적으로 옵션이 더 필요할 수도 있다.
+예를 들어 volume share (local pc와 container 사이의 공유 폴더 생성) 이나 port 지정 같은 설정은 처음에 docker run을 할 때 -v 또는 -p로 주지 않으면 중간에 추가할 수가 없다. 
+이럴 때에는, container를 commit하여 현재 상태를 이미지로 저장해 두고, 이를 다시 run 하면서 추가 옵션을 주는 형태로 실행시키면 할 수 있다.
+예를 들어, testtest 라는 이름의 container가 run 중일 때, port 지정 옵션을 추가하고 싶다면, 
+
+sudo docker commit testtest NEW_NAME
+
+위와 같이 먼저 한다. 
+여기서 NEW_NAME은 새로운 이름으로서 아무거나 지정해도 상관 없다. 나중에 잊어버리지만 않으면 된다.
+
+그 다음, 새로 생성된 NEW_NAME을 실행시키면서, 옵션을 준다
+예를 들어, 8888로 port를 지정하고자 한다면,
+
+sudo docker run -it -p 8888:8888 NEW_NAME
+
+위와 같이 하여 실행하게 되면, port 가 8888로 setting된 상태로 container가 작동함을 확인할 수 있다.
