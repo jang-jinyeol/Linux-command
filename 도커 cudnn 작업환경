@@ -161,3 +161,7 @@ apt-get install x11-apps
 xclock
 
 시계모양 뜨면 성공
+
+
+웹캠
+--env="QT_X11_NO_MITSHM=1" --device="/dev/video0:/dev/video0"
