@@ -126,6 +126,10 @@ torch.cuda.is_available()
 
 apt update
 
+apt-get install libglib2.0-0
+
+안되면 아래 추가 설치
+
 apt-get install -libgl1-mesa-glx
 
 ----------
