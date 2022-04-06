@@ -1,3 +1,13 @@
+https://github.com/Riey/kime/releases/download/v2.5.3/libkime-qt-5.11.3.so
+
+를
+
+한컴2022베타 설치된 디렉토리/hnc/hoffice11/Bin/qt/plugins/platforminputcontexts/
+
+에 넣으면 됨
+
+-------------------------------
+
 설치 후 /usr/share/applications/hoffice11-hwp.desktop 파일을 vi로 열어 위와 같이 변경해 줍니다.
 변경된 부분은 Exec=/bin/bash -c "LANGUAGE=ko_KR /opt/hnc/hoffice11/Bin/hwp %f" 와 같이  변경합니다. 저장 후 실행해 보면 한글 인터페이스로 실행됩니다. 
 
