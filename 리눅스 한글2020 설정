@@ -1,3 +1,20 @@
+새로운 정보는 한컴 구름 리눅스의 github에서 확인할 수 있습니다.
+
+아래와 같이 파일을 받습니다.
+
+curl -H "Host: cdn.hancom.com" -H "Referer: https://www.hancom.com/cs_center" -fLO https://cdn.hancom.com/pds/hnc/DOWN/gooroom/hoffice_11.20.0.1520_amd64.deb
+그런-다음 변조 여부를 확인합니다.
+
+sha256sum hoffice_11.20.0.1520_amd64.deb
+1ecb2f82e915b49706d1f5f6d206f8bd4a9384fda2bd56798c94046865fe5730 hoffice_11.20.0.1520_amd64.deb
+설치합니다:
+
+sudo apt install ./hoffice_11.20.0.1520_amd64.deb
+시스템을 재시작합니다.
+
+그놈에서 Ctrl+A를 눌러서 "hwp" 정도를 입력하면, "Hwp 2022 베타"가 보일 것이고, 클릭하면 실행될 것입니다.
+
+----------------
 kime 한글 설정
 
 https://github.com/Riey/kime/releases/download/v2.5.3/libkime-qt-5.11.3.so
