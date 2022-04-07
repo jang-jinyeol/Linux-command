@@ -21,7 +21,9 @@ https://github.com/Riey/kime/releases/download/v2.5.3/libkime-qt-5.11.3.so
 
 를
 
-한컴2022베타 설치된 디렉토리/hnc/hoffice11/Bin/qt/plugins/platforminputcontexts/
+한컴2022베타 설치된 디렉토리
+
+opt/hnc/hoffice11/Bin/qt/plugins/platforminputcontexts/
 
 에 넣으면 됨
 
