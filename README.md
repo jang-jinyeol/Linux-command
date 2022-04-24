@@ -19,3 +19,4 @@ sudo ip link set enp5s0 mtu 400
 다시 변경
 
 sudo ip link set enp5s0 mtu 1500
+.
