@@ -1,0 +1,12 @@
+sudo rmmod nvidia_drm
+sudo rmmod nvidia_modeset
+sudo rmmod nvidia_uvm
+
+sudo rmmod nvidia
+
+
+lsmod | grep nvidia
+
+아무것도 안 나와야 함
+
+nvidia-smi 다시 확인
