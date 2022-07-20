@@ -1,0 +1,21 @@
+/etc/apache2/sites-available/{도메인 이름}.conf
+
+cp 000-default.conf 도메인
+
+그리고 심볼릭 링크로 enable 시켜줍니다.
+
+ln -s /etc/apache2/sites-available/petland.duckdns.org /etc/apache2/sites-enabled/
+
+sudo apt install certbot python3-certbot-apache
+
+vim /etc/apache2/sites-available/{도메인이름}.conf
+
+ServerName 도메인
+ServerAlias 도메인
+
+apache2ctl configtest
+
+(service apache2 reload) 필요한가?
+
+
+certbot --apache
