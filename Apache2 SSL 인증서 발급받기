@@ -10,6 +10,8 @@ sudo apt install certbot python3-certbot-apache
 
 vim /etc/apache2/sites-available/{도메인이름}.conf
 
+apache2ctl configtest 명령어로 설정값을 테스트해줍니다.
+
 ServerName 도메인
 ServerAlias 도메인
 
