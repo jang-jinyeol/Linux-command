@@ -61,3 +61,14 @@ Docker 를 실행할 때 GPU 자원을 사용하는 방식은 대략 2가지정�
   docker run --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all ubuntu:18.04 nvidia-smi
 해당 옵션 또한 특정 GPU 디바이스를 지정할 수 있다.
   docker run --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0 ubuntu:18.04 nvidia-smi
+  
+  
+  
+  
+  ------
+  
+  
+
+E: dpkg was interrupted, you must manually run'dpkg arranged 'to correct the problem.
+cd/var/lib/dpkg/updates
+rm -r ./*
