@@ -10,3 +10,32 @@ lsmod | grep nvidia
 아무것도 안 나와야 함
 
 nvidia-smi 다시 확인
+
+----------------------------드라이버 재설치-----------------------------------
+
+
+I found the solution and now Kubuntu starts up normally as expected.
+
+Before starting, I wanted to confirm this version mismatch between loaded kernel module and newly installed standalone module files. User ladar showed in his answer that the following will confirm this issue
+
+$ cat /proc/driver/nvidia/version
+$ cat /sys/module/nvidia/version
+
+First, I purged all drivers and libraries
+
+$ sudo apt purge nvidia-* && sudo apt purge libnvidia-*
+
+Then I checked if there weren't any nvidia drivers installed. The following did not return anything, as it should
+
+$ dpkg -l nvidia-*|grep ^ii
+
+sudo init 3 (텍스트 모드)
+
+https://www.nvidia.com/Download/index.aspx?lang=en-us (드라이버 버전에 맞는 거 다운로드)
+
+$ cd $HOME/Downloads/Nvidia/
+$ chmod a+x NVIDIA-Linux-x86_64-390.144.run
+$ sudo ./NVIDIA-Linux-x86_64-390.144.run 
+$ sudo reboot
+
+---------------------------------------------------------------
