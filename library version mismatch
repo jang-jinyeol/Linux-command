@@ -33,9 +33,16 @@ sudo init 3 (텍스트 모드)
 
 https://www.nvidia.com/Download/index.aspx?lang=en-us (드라이버 버전에 맞는 거 다운로드)
 
-$ cd $HOME/Downloads/Nvidia/
+
 $ chmod a+x NVIDIA-Linux-x86_64-390.144.run
 $ sudo ./NVIDIA-Linux-x86_64-390.144.run 
 $ sudo reboot
 
 ---------------------------------------------------------------
+
+
+sudo vim /etc/apt/apt.conf.d/auto-upgrades
+
+Update-Package-Lists "0";
+Download-Upgradeable-Packages "1";
+나머지 0
