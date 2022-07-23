@@ -1,0 +1,14 @@
+/* 모두제거 후 재설치 */
+# vi /var/lib/dpkg/status 내용 제거 후 저장(파일 제거 X)
+# apt update && apt install -f
+
+
+
+
+/* 이슈사항만 제거 후 재설치 */
+# /var/log/apt/term.log 파일 오픈
+# term.log 제일 하단의 오류가 발생한 지점의 로그항목 확인
+# apt remove package-name 깨진 패키지 제거
+  - dpkg --get-selections |grep hold 보류된 패키지 목록 확인
+# apt update && apt upgrade
+# apt autoremove
