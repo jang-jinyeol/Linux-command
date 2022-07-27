@@ -28,3 +28,8 @@ ex) scp -P 44553 backup.tar jy@175.125.151.102:/home/jy
 디렉토리를 전송할 경우 -r 추가
 
 ex) scp -P 9999 -r /home/local remote@myserver.com:/home/remote
+
+===============서버에서 파일 다운 ===============
+scp -P [포트번호] (디렉토리는 -r 옵션 추가) [계정명]@[주소]:[파일경로 or 디렉토리 경로] [다운받을 로컬경로]
+
+ex) scp -P 1022 -r jjy@223.194.45.52:~\mysqlback C:\Users\ddcfd\Downloads
