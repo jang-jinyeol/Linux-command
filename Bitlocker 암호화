@@ -14,3 +14,4 @@ manage-bde -protectors -add e: -pw (e드라이브 예시)
       ID: {355914C2-BD17-40B5-A063-F8DD785D91B6}
 =========================================
       
+manage-bde.exe -unlock E: -pw
