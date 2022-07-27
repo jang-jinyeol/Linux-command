@@ -1,0 +1,2 @@
+cmd 관리자 권한 실행
+manage-bde.exe -on E: (드라이브 이름)
