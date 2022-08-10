@@ -10,6 +10,14 @@ lsmod | grep nvidia
 
 nvidia-smi 다시 확인
 
+이 방법으로 해결이 안된다면 sudo dmesg 했을 때 커널 버전과 그래픽 드라이버 버전이 맞지 않는 것을 확인할 수 있다.
+sudo apt update && sudo apt upgrade 로 최신 커널을 받는다.
+uname -r 로 현재 사용 중인 커널을 확인한다.
+dpkg --list | grep linux-image 설치된 모든 커널 버전을 확인한다.
+sudo apt-get purge [linux-image-5.15.0-41-generic] []안에 특정 커널 버전을 삭제 (최신 커널 제외한 버전 삭제)
+sudo update-grub grub 업데이트
+sudo reboot
+
 ----------------------------드라이버 재설치-----------------------------------
 
 
