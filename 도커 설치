@@ -60,3 +60,41 @@ Linux, sudo 없이 명령어 실행하기 (예:docker)
 sudo usermod -aG docker $USER
 
 logout //다시 로그인 이후부터 적용
+
+
+
+
+
+2. nvidia-docker 설치
+
+ 
+
+  - GPG키와 저장소 추가
+
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
+   && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
+   && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+   
+   - nvidia-docker 설치
+
+$ sudo apt-get update
+$ sudo apt-get install -y nvidia-docker2
+
+- docker 재시작
+
+sudo systemctl restart docker
+ 주의) restart 명령어로 docker를 재실행하면 기존의 실행중이던 컨테이너들이 stop 되게 된다. 그래서 기존의 컨테이너 실행시 --restart-always 로 실행된 컨테이너는 자동으로 실행되지만 그렇지 않은 컨테이너는 수동으로 재실행시켜 주어야 한다.
+
+
+
+3. docker 명령어로 gpu 사용가능하게 컨테이너 띄우기
+
+ 
+
+ docker에서 컨테이너를 띄우면 현재 호스트와 공유가 되지 않아 GPU 사용이 불가능하다. 그래서 호스트와 컨테이너를 연결해 호스트의 GPU 사용을 가능하게 해주는 것이 nvidia-docker 이다.
+
+ 
+
+ 앞선 1, 2의 설치가 완료되었다면 아래의 명령어로 컨테이너에서 nvidia-smi 명령어가 작동하여 출력됨을 확인한다.
+
+docker run --rm --gpus all ubuntu:18.04 nvidia-smi
