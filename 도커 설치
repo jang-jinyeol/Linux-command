@@ -1,0 +1,62 @@
+오래된 버전 삭제하기
+혹시나 기존의 오래된 버전이 있는지 확실히 할 수 있으며, 있다면 최신 버전 설치를 위해 삭제 해줍니다.
+
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+repository 설정하기
+apt package index를 업데이트 하고 HTTPS를 통해 repository 를 이용하기 위해 pakcage 들을 설치 해줍니다.
+
+sudo apt-get update
+
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+    
+ Docker의 Official GPG Key 를 등록합니다.
+    
+ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+ 
+ stable repository 를 등록해줍니다.
+ 
+  echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+ 
+ 
+ Docker Engine 설치하기
+아래 명령어를 입력하면 자동으로 최신 버전이 설치 됩니다
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+설치 완료
+docker --version
+
+sudo docker run hello-world
+
+
+Docker Compose는 여러개의 도커 어플리케이션 컨테이너들을 정의하고 실행 할 수 있게 도와주는 툴 입니다. YAML 파일을 사용해 어플리케이션의 서비스를 설정하고 하나의 커맨드만으로 여러개의 도커 컨테이너들을 사용 할 수 있습니다.
+
+Docker 를 설치 해도 Compose 가 딸려 오는 것은 아니기 때문에 따로 설치 해 주어야 합니다.
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+실행 할 수 있는 권한을 부여 합니다.
+
+ sudo chmod +x /usr/local/bin/docker-compose
+ 
+ 잘 설치 되었는지 확인해봅니다.
+ 
+ docker-compose --version
+
+## docker-compose version 1.29.2, build 5becea4c
+
+
+
+Linux, sudo 없이 명령어 실행하기 (예:docker)
+
+sudo usermod -aG docker $USER
+
+logout //다시 로그인 이후부터 적용
