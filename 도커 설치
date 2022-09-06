@@ -55,12 +55,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 
 
 
-Linux, sudo 없이 명령어 실행하기 (예:docker)
-
-sudo usermod -aG docker $USER
-
-logout //다시 로그인 이후부터 적용
-
 
 
 
@@ -98,3 +92,40 @@ sudo systemctl restart docker
  앞선 1, 2의 설치가 완료되었다면 아래의 명령어로 컨테이너에서 nvidia-smi 명령어가 작동하여 출력됨을 확인한다.
 
 docker run --rm --gpus all ubuntu:18.04 nvidia-smi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sudo 없이
+
+
+도커그룹생성
+sudo groupadd docker
+
+도커그룹에 유저추가
+sudo usermod -aG docker ${USER}
+or
+sudo gpasswd -a $USER docker
+
+도커 재시작
+sudo service docker restart
+
+현재 사용자 로그아웃 및 재로그인
+sudo su - // 루트사용자로 변경
+su - ubuntu // 사용자로 변경
+
+테스트
+docker run hello-world
+
+
