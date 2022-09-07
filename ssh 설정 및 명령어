@@ -30,8 +30,8 @@ ex) scp -P 44553 backup.tar jy@175.125.151.102:/home/jy
 띄어쓰기 X
 ex) scp -P 9999 -r /home/local remote@myserver.com:/home/remote
 ex) scp -P 4455 -r D:\지하철\Training\폭행 jy@223.194.45.64:/home/jy/yolov7/cctv/Training
-ex) scp -P 4455 -r D:\지하철\Training\폭행\[라벨]폭행_1 jy@223.194.45.64:/home/jy/yolov7/cctv/Training
-ex) scp -P 4455 -r D:\지하철\Training\폭행\[원천]폭행_1 jy@223.194.45.64:/home/jy/yolov7/cctv/Training
+ex) scp -P 4455 -r D:\지하철\Training\폭행\[라벨]폭행_1 jy@223.194.45.64:/home/jy/yolov7/cctv/Training/폭행
+ex) scp -P 4455 -r D:\지하철\Training\폭행\[원천]폭행_1 jy@223.194.45.64:/home/jy/yolov7/cctv/Training/폭행
 ===============서버에서 파일 다운 ===============
 scp -P [포트번호] (디렉토리는 -r 옵션 추가) [계정명]@[주소]:[파일경로 or 디렉토리 경로] [다운받을 로컬경로]
 
