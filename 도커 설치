@@ -76,7 +76,7 @@ $ sudo apt-get install -y nvidia-docker2
 
 - docker 재시작
 
-sudo systemctl restart docker
+sudo service docker restart
  주의) restart 명령어로 docker를 재실행하면 기존의 실행중이던 컨테이너들이 stop 되게 된다. 그래서 기존의 컨테이너 실행시 --restart-always 로 실행된 컨테이너는 자동으로 실행되지만 그렇지 않은 컨테이너는 수동으로 재실행시켜 주어야 한다.
 
 
