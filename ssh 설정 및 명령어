@@ -35,4 +35,4 @@ ex) scp -P 4455 -r D:\지하철\Training\폭행\[원천]폭행_1 jy@223.194.45.6
 ===============서버에서 파일 다운 ===============
 scp -P 포트 아이디@주소:원격경로 로컬경로
 
-ex) scp -P 1022 -r jjy@223.194.45.52:~\mysqlback C:\Users\ddcfd\Downloads
+ex) scp -P 4455 -r jy@223.194.45.64:/mnt/storage1/야생동물/데이터/convert2 C:\Users\ddcfd\Downloads\임시
