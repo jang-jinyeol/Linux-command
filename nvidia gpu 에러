@@ -1,0 +1,8 @@
+sudo systemctl isolate multi-user.target
+
+lsmod | grep nvidia.drm
+
+
+sudo modprobe -r nvidia-drm
+
+lsmod | grep nvidia.drm
