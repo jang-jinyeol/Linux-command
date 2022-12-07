@@ -5,4 +5,20 @@ lsmod | grep nvidia.drm
 
 sudo modprobe -r nvidia-drm
 
+
+
+
+
 lsmod | grep nvidia.drm
+
+
+----------
+sudo rmmod nvidia_drm
+sudo rmmod nvidia_modeset
+sudo rmmod nvidia_uvm
+만약 rmmod: ERROR: Module nvidia is in use 라는 에러 메시지가 나온다면
+sudo lsof /dev/nvidia*
+
+
+
+lsmod | grep nvidia < 이거 했을 때 아무것도 안 나와야 함
